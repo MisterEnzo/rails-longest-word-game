@@ -1,0 +1,20 @@
+<div class="container">
+  <p>******** Welcome to the longest word-game!********</p>
+  <p> "Here is your grid:"</p>
+
+
+  <p><%= @grid.join(" ") %></p>
+  <p>*****************************************************</p>
+
+  <p>"What's your best shot?"</p>
+</div>
+
+<div class="container">
+  <form action="/score" method="get" class=form-group>
+    <label for="guess">Your guess</label>
+    <input type="text" id="guess" name="attempt" placeholder="word">
+    <input type="hidden" name="start_time" value="<%=@time%>">
+    <input type="hidden" name="grid" value="<%=@grid%>">
+    <input type="submit" value="Go on!">
+  </form>
+</div>
