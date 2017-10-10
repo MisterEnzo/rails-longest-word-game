@@ -12,6 +12,7 @@ class GamesController < ApplicationController
     @result = run_game(@attempt, @grid, @start_time, @end_time)
   end
 
+
   private
   # game methods
   require 'open-uri'
